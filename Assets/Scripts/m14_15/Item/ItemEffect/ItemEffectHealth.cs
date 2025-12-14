@@ -1,7 +1,6 @@
 using UnityEngine;
 public class ItemEffectHealth : ItemEffect
 {
-    [SerializeField] ParticleSystem _particleSystemPrefab;
     public float Health { get; private set; }
     
     public override void Initialize(float value)
@@ -18,7 +17,7 @@ public class ItemEffectHealth : ItemEffect
 
     public override void Use(Character character)
     {
-        Instantiate(_particleSystemPrefab, character.transform);
+        CreateParticle(character);
         character.Health += Health;
     }
 }

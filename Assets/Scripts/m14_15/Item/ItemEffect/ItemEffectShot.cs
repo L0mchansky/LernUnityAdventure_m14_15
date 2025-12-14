@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ItemEffectShot : ItemEffect
 {
-    [SerializeField] ParticleSystem _particleSystemPrefab;
     [SerializeField] private Projectile _projectilePrefab;
 
     public float SpeedProjectile { get; private set; }
@@ -21,7 +20,7 @@ public class ItemEffectShot : ItemEffect
 
     public override void Use(Character character)
     {
-        Instantiate(_particleSystemPrefab, character.transform);
+        CreateParticle(character);
 
         Projectile projectile = Instantiate(_projectilePrefab, character.transform.position, character.transform.rotation);
         projectile.Initialize(SpeedProjectile);

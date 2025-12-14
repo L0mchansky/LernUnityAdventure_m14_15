@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ItemEffectSpeed : ItemEffect
 {
-    [SerializeField] ParticleSystem _particleSystemPrefab;
     public float Speed { get; private set; }
 
     public override void Initialize(float value)
@@ -19,7 +18,8 @@ public class ItemEffectSpeed : ItemEffect
 
     public override void Use(Character character)
     {
-        Instantiate(_particleSystemPrefab, character.transform);
+        CreateParticle(character);
+
         character.Speed += Speed;
     }
 }
