@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class ItemEffect : MonoBehaviour
 {
-    [SerializeField] ParticleSystem _particleSystemPrefab;
+    [SerializeField] private ParticleSystem _particleSystemPrefab;
 
     public abstract void Initialize(float value);
     public abstract void Use(Character character);
