@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
     [SerializeField] private Inventory _inventory;
 
     [SerializeField] private float _health;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotationSpeed;
 
     [SerializeField] private ItemSocket _itemSocket;
@@ -28,18 +28,18 @@ public class Character : MonoBehaviour
         } 
     }
 
-    public float Speed
+    public float MoveSpeed
     {
         get
         {
-            return _speed;
+            return _moveSpeed;
         }
 
         set
         {
             if (value < 0)
                 value = 0;
-            _speed = value;
+            _moveSpeed = value;
         }
     }
 }

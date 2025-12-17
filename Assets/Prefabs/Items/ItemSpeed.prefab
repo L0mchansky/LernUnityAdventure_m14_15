@@ -62,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleSystemPrefab: {fileID: 6236425827700613666, guid: 064c608c3a271334299e1fa22913842f,
     type: 3}
+  _moveSpeed: 5
 --- !u!135 &811143828067116708
 SphereCollider:
   m_ObjectHideFlags: 0

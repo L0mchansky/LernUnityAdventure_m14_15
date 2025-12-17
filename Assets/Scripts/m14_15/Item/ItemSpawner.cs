@@ -8,8 +8,6 @@ public class ItemSpawner : MonoBehaviour
 
     [SerializeField] private List<Item> _itemPrefabs;
 
-    [SerializeField] private float _defaultValueToEffect = 5f;
-
     private List<Item> _createdItems;
 
     private float _time;
@@ -32,8 +30,6 @@ public class ItemSpawner : MonoBehaviour
             {
                 Item item = Instantiate(missingItem, spawnPoint.Position, Quaternion.identity);
 
-                InitializeItemEffect(item);
-
                 _createdItems.Add(item);
                 spawnPoint.Occupy(item);
 
@@ -42,11 +38,6 @@ public class ItemSpawner : MonoBehaviour
                 _time = 0;
             }
         }
-    }
-
-    private void InitializeItemEffect(Item item)
-    {
-        item.Effect.Initialize(_defaultValueToEffect);
     }
 
     private Item GetMissingItem()

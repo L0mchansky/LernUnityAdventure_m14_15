@@ -45,7 +45,7 @@ public class CharacterController : MonoBehaviour
 
         Vector3 normalizedInput = input.normalized;
 
-        _moverCharacterController.ProcessTo(normalizedInput, _character.Speed);
+        _moverCharacterController.ProcessTo(normalizedInput, _character.MoveSpeed);
         _rotater.ProcessTo(normalizedInput, _character.RotationSpeed);
     }
 }

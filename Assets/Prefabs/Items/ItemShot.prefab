@@ -64,6 +64,7 @@ MonoBehaviour:
     type: 3}
   _projectilePrefab: {fileID: 5359536489667180530, guid: 2e2cd26a81063c546b97cc51ccf9fd6b,
     type: 3}
+  _flightSpeed: 10
 --- !u!135 &6729568069709085493
 SphereCollider:
   m_ObjectHideFlags: 0

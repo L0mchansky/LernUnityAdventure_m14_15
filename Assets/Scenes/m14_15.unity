@@ -530,7 +530,6 @@ MonoBehaviour:
   - {fileID: 6499682507388045829, guid: 2c2cb30d9c5b00e4683dcbf16bd9eac7, type: 3}
   - {fileID: 600947724023717391, guid: 28adf8a30142b9d4eb700e08266e7b01, type: 3}
   - {fileID: 7942742321588693432, guid: e788cebcd54729f469ce613cf49e359e, type: 3}
-  _defaultValueToEffect: 5
 --- !u!4 &351180680
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,7 +1311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventory: {fileID: 658830409}
   _health: 10
-  _speed: 10
+  _moveSpeed: 10
   _rotationSpeed: 300
   _itemSocket: {fileID: 1562481065}
 --- !u!54 &1414350758

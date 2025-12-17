@@ -6,7 +6,6 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float _timeToDestory;
 
     private float _speedProjectile;
-    private float _time;
 
     public void Initialize(float speedProjectile)
     {  
@@ -15,12 +14,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        _time += Time.deltaTime;
-
-        if (_time >= _timeToDestory)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject, _timeToDestory);
 
         _mover.ProcessTo(transform.forward.normalized, _speedProjectile);
     }
